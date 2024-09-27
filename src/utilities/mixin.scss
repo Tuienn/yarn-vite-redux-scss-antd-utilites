@@ -1,0 +1,50 @@
+@mixin reset-mp {
+    margin: 0;
+    padding: 0;
+}
+@mixin set-flex($justify: flex-start, $align: stretch, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin set-grid($columns: 1, $gap: 0) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+@mixin set-wh($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+@mixin set-bg($color: #fff) {
+    background-color: $color;
+}
+@mixin set-position(
+    $position: static,
+    $top: auto,
+    $right: auto,
+    $bottom: auto,
+    $left: auto
+) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin center-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin center-text($line-height: auto) {
+    text-align: center;
+    line-height: $line-height;
+}
